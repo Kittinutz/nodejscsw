@@ -4,36 +4,58 @@
 
 > We develop for CSW 2/60
 
-## How to install
+## How to Install
 
 ```bash
-git clone https://github.com/Kittinutz/nodejscsw.git
-cd nodejscsw
+# install command
+git clone https://github.com/Kittinutz/nodejscsw.git && \
+cd nodejscsw && \
 npm install
-npm run dev
-
-# open web browser: http://127.0.0.1:3000
 ```
 
-## Project Dependencies
+## How to Start Server
 
-```json
-"dependencies": {
-  "body-parser": "^1.18.2",
-  "cors": "^2.8.4",
-  "express": "^4.16.3",
-  "nodemon": "^1.17.3"
-}
+```bash
+# run development mode
+npm run dev
+
+# open web browser when start server: http://127.0.0.1:3000
 ```
 
 ## Constructure Project
 
+> project tree
+
 ```bash
-nodejscsw
+nodejscsw/
 ├── index.js
 ├── package.json
 ├── package-lock.json
-└── README.md
+├── README.md
+├── yarn-error.log
+└── yarn.lock
+```
+
+```json
+{
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.17.3"
+  }
+}
 ```
 
 ## Deploying With Heroku Server
