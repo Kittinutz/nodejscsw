@@ -4,7 +4,7 @@
   "description": "We develop for CSW 2/60",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon"
+    "dev": "npx nodemon --exec babel-node index.js"
   },
   "keywords": [],
   "author": "",
