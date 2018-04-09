@@ -22,6 +22,15 @@ npm run dev
 # open web browser when start server: http://127.0.0.1:3000
 ```
 
+## How To Use
+
+* Generate sessionId
+> POST /api/session
+
+* Use sessionId for accesss database
+> [GET, POST] /api/users/:sessionId
+> [GET, PUT, DELTE] /api/users/:sessionId/:id
+
 ## Constructure Project
 
 > project tree
