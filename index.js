@@ -19,6 +19,3 @@ Useroute(app);
 app.listen(PORT,()=>{
   console.log('server listen on port 3000')
 });
-
-
-
