@@ -1,12 +1,23 @@
-const express = require('express');
-const app = express();
-const PORT = 3000;
+import express from 'express'
+import bodyParser from 'body-parser'
+import router from './routes'
 
-app.listen(PORT,()=>{
-  console.log('server listen on port 3000')
-});
+const app = express()
+const PORT = process.env.PORT || 3000
 
-app.get('/',(req,res)=>{
-  console.log('helloword')
-  res.send(`Helloworld listen on port ${PORT}`)
-})
+app
+  // NOTE: pass json data
+  .use(bodyParser.json())
+  .use(bodyParser.urlencoded({ extended: true }))
+
+  // NOTE: add router to server here
+  .use('/api', router)
+
+  .listen(PORT, () => {
+    console.log(`Server listen on port ${PORT}`)
+  })
+
+app
+  .get('/', (req, res) => {
+    res.send('It\' ok!')
+  })
