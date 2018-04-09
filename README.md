@@ -64,4 +64,9 @@ npm run dev
 
 ```bash
 git remote add heroku https://git.heroku.com/nodejscsw.git
+
+# when push deploy server
+git push heroku
 ```
+
+> Next, open web browser: [https://nodejscsw.herokuapp.com](https://nodejscsw.herokuapp.com)
