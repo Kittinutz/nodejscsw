@@ -4,7 +4,7 @@
   
 # How to install
 ````
-    $ git clone this project
+    $ git clone https://github.com/Kittinutz/nodejscsw.gits
     $ cd nodejscsw
     $ npm install 
     $ npm run dev
