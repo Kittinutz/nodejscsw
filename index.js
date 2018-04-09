@@ -1,8 +1,9 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import router from './routes'
+const Userroute = require('./Routes/Userroute');
 
-const app = express()
+const app = express();
 const PORT = process.env.PORT || 3000
 
 app
@@ -21,3 +22,10 @@ app
   .get('/', (req, res) => {
     res.send('It\' ok!')
   })
+
+
+/*********Another Choice****/
+let userdata=[{id:1,name:"Kittinut",surname:"Pramhan",job:"novice"}];
+var routeruser =express.Router();
+Userroute(app,userdata,routeruser);
+
