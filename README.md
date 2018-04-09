@@ -1,36 +1,67 @@
-# Welcome to Nodejs server 
-## Purpose 
-  - developer with Client and Server Subject 242-3xx 2/60
-  
-# How to install
-````
-    $ git clone https://github.com/Kittinutz/nodejscsw.gits
-    $ cd nodejscsw
-    $ npm install 
-    $ npm run dev
-`````
-# Dependencies
+# Welcome to Nodejs Server
 
+## Purpose
+
+> We develop for CSW 2/60
+
+## How to Install
+
+```bash
+# install command
+git clone https://github.com/Kittinutz/nodejscsw.git && \
+cd nodejscsw && \
+npm install
 ```
- "dependencies": {
+
+## How to Start Server
+
+```bash
+# run development mode
+npm run dev
+
+# open web browser when start server: http://127.0.0.1:3000
+```
+
+## Constructure Project
+
+> project tree
+
+```bash
+.
+├── index.js
+├── package.json
+├── Procfile
+└── README.md
+```
+
+> package.json
+
+```json
+{
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0"
+    ]
+  },
+  "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
     "nodemon": "^1.17.3"
   }
+}
 ```
-# Constructure Project
-```
-nodejscsw/
-    .gitignore
-    Controller
-    index.js
-    package.json
-    package-lock.json
-    README.md
 
+## Deploying With Heroku Server
+
+> First, add heroku server to remote repository
+
+```bash
+git remote add heroku https://git.heroku.com/nodejscsw.git
 ```
-# Constructure port
-`
-server listen on port :3000
-`

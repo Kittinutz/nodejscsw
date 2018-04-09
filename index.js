@@ -1,12 +1,14 @@
-const express = require('express');
-const app = express();
-const PORT = 3000;
+import express from 'express'
 
-app.listen(PORT,()=>{
-  console.log('server listen on port 3000')
-});
+const app = express()
+const PORT = process.env.PORT || 3000
 
-app.get('/',(req,res)=>{
-  console.log('helloword')
-  res.send(`Helloworld listen on port ${PORT}`)
-})
+app
+  .listen(PORT, () => {
+    console.log(`Server listen on port ${PORT}`)
+  })
+
+app
+  .get('/', (req, res) => {
+    res.send(`Helloworld listen on port ${PORT}`)
+  })
