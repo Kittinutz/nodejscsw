@@ -29,6 +29,7 @@ npm run dev
 
 * Use sessionId for accesss database
 > [GET, POST] /api/users/:sessionId
+
 > [GET, PUT, DELTE] /api/users/:sessionId/:id
 
 ## Constructure Project
