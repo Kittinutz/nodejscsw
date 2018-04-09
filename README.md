@@ -27,14 +27,14 @@ npm run dev
 > project tree
 
 ```bash
-nodejscsw/
+.
 ├── index.js
 ├── package.json
-├── package-lock.json
-├── README.md
-├── yarn-error.log
-└── yarn.lock
+├── Procfile
+└── README.md
 ```
+
+> package.json
 
 ```json
 {
