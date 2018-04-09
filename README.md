@@ -35,3 +35,11 @@ nodejscsw
 ├── package-lock.json
 └── README.md
 ```
+
+## Deploying With Heroku Server
+
+> First, add heroku server to remote repository
+
+```bash
+git remote add heroku https://git.heroku.com/nodejscsw.git
+```
