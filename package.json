@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "npx nodemon --exec babel-node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0"
+    ]
+  },
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "nodemon": "^1.17.3"
   }
