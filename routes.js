@@ -1,20 +1,35 @@
 import { Router } from 'express'
+import generateId from './generateId'
 
 const router = Router()
+const database = {}
 
-router.route('/users')
-  .get((req, res) => {
+router
+  .post('/session', (req, res) => {
+    const sessionId = generateId()
+    database[sessionId] = []
+
     res.json({
-      GET: '/users',
-      POST: '/users',
+      sessionId,
     })
   })
 
-  .post((req, res) => {
-    const data = {
-      status: 200,
-      text: 'ok',
-    }
+router
+  .route('/users/:sessionId')
+  .get(({ params: { sessionId } }, res) => {
+    res.json(database[sessionId])
+  })
+
+  .post(({ params: { sessionId }, body: { firstname, lastname, age } }, res) => {
+    const data = database[sessionId]
+
+    data.push({
+      id: data.length + 1,
+      firstname,
+      lastname,
+      age,
+    })
+
     res.json(data)
   })
 
