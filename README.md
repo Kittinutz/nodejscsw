@@ -3,11 +3,12 @@
   - developer with Client and Server Subject 242-3xx 2/60
   
 # How to install
-`
+````
     $ git clone this project
     $ cd nodejscsw
     $ npm install 
-`
+    $ npm run dev
+`````
 # Dependencies
 
 ```
@@ -29,3 +30,7 @@ nodejscsw/
     README.md
 
 ```
+# Constructure port
+`
+server listen on port :3000
+`
