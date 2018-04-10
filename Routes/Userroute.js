@@ -44,12 +44,10 @@ module.exports = (app,users,router)=>{
     })
     .delete((req,res)=>{
     const {id} = req.params
-      // var removeIndex = users.map(function(item) { return item.id; }).indexOf(id);
-      // users.splice(removeIndex, 1);
-      // res.send(users)
-      const index = id - 1
-      delete users[index]
+      var removeIndex = users.map(function(item) { return item.id; }).indexOf(id);
+      users.splice(removeIndex, 1);
       res.send(users)
+    
     
     })
 }
