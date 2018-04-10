@@ -1,11 +1,12 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import router from './routes'
+import cors from 'cors'
 const Userroute = require('./Routes/Userroute');
 
 const app = express();
 const PORT = process.env.PORT || 3000
-
+app.use(cors());
 app
   // NOTE: pass json data
   .use(bodyParser.json())

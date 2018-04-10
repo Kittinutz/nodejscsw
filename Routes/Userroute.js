@@ -11,6 +11,7 @@ module.exports = (app,users,router)=>{
       if(!name&&!surname&&!job){
         res.send('data is not provide');
       }
+      console.log(req.body);
         const id = users.length + 1;
         var user = {};
         user.id = id;
